@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Тестовое задание</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/5d38e2d117.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="input">
+            <label>Введите свои данные</label>
+            <input type="text" placeholder="ФИО" id="text" required>
+            <input type="date" placeholder="Дата рождения" id="date" style="width: 172px;">
+            <input type="text" placeholder="Адрес" id="adress">
+            <input type="email" placeholder="e-mail" id="e-mail">
+            <input type="tel" placeholder="Телефон +375 ......" maxlength="13" id="tel" >
+            <button onclick="myClick()">Заполнить</button>
+        </div>
+
+        
+        
+        
+
+        <div class="container">
+            <div class="side"><h3>CurriculumVitae</h3></div>
+            <div class="main">
+                <div class="header">
+                    <div class="name"><h1>Natasha Anne Lane</h1></div>
+                    <div class="date"><b>Date of birth: 15 January 1998</b></div>
+                    <div class="inform">
+                        <div class="photo">
+                            <figure>
+                                <img src="face.png" alt="UNDEFINED">
+                            </figure>
+                        </div>
+                        <div class="contact"><h2 style="background-color: rgb(25, 14, 168); color: white; text-align: center;">Contact Information</h2>
+                            <div class="adress">
+                                <i class="fas fa-home-alt"></i>
+                                <div><p>37 Cherry Road<br>
+                                Liverpool<br>
+                                LA12 456</p></div>
+                            </div>
+                            <div class="e-mail">
+                                <i class="fas fa-envelope"></i>
+                                <p>natashanne@mywold.com</p>
+                            </div>
+                            <div class="tel">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>0044 151 123456</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="item">
+                    <div><h2><span>Education</span></h2></div>
+                    <p>9 GCSEs Including English and maths</p>
+                    <p><b>Evesop High School, Liverpool</b></p>
+                </div>
+                <div class="item">
+                    <h2><span>Work experience</span></h2>
+                    <p>Helper at <b>Playland Nursery School</b> in summer holiday - 1 month</p>
+                    <p>Waitress at <b>Italiz Pizza reustarant</b> on Saturday - 17 month</p>
+                </div>
+                <div class="item">
+                    <h2><span>Language</span></h2>
+                    <p>French - B1 level</p>
+                    <p>Spanish - A2 level</p>
+                </div>
+                <div class="item">
+                    <h2><span>Skills and interests</span></h2>
+                    <p>Swimming</p>
+                    <p>Lifeguard course - Evesop Swimming Pool</p>
+                </div>
+                <div class="item">
+                    <h2><span>References</span></h2>
+                    <p>Mrs M.Norton, Playland Nursery School, 42 Cherry Road, Liverpool</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function myClick(){
+                let arr = document.getElementsByTagName('input');
+                let divheader = document.querySelector('div.header');
+                divheader.innerHTML = `<div class="header">
+                    <div class="name"><h1>${arr[0].value}</h1></div>
+                    <div class="date"><b>Date of birth: ${arr[1].value}</b></div>
+                    <div class="inform">
+                        <div class="photo">
+                            <figure>
+                                <img src="" alt="UNDEFINED">
+                            </figure>
+                        </div>
+                        <div class="contact"><h2 style="background-color: rgb(25, 14, 168); color: white; text-align: center;">Contact Information</h2>
+                            <div class="adress">
+                                <i class="fas fa-home-alt"></i>
+                                <p>${arr[2].value}<br>
+                            </div>
+                            <div class="e-mail">
+                                <i class="fas fa-envelope"></i>
+                                <p>${arr[3].value}</p>
+                            </div>
+                            <div class="tel">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>${arr[4].value}</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>`
+
+                // let fio = document.getElementById('text').value;
+                // let date = document.getElementById('date').value;
+                // let adress = document.getElementById('adress').value;
+                // let email = document.getElementById('e-mail').value;
+                // let tel = document.getElementById('tel').value;
+
+                // divheader.innerHTML = `<div class="header">
+                //     <div class="name"><h1>${fio}</h1></div>
+                //     <div class="date"><b>Date of birth: ${date}</b></div>
+                //     <div class="inform">
+                //         <div class="photo">
+                //             <figure>
+                //                 <img src="" alt="UNDEFINED">
+                //             </figure>
+                //         </div>
+                //         <div class="contact"><h2 style="background-color: rgb(25, 14, 168); color: white; text-align: center;">Contact Information</h2>
+                //             <div class="adress">
+                //                 <p>${adress}<br>
+                //             </div>
+                //             <div class="e-mail">
+                //                 <p>${email}</p>
+                //             </div>
+                //             <div class="tel">
+                //                 <p>${tel}</p>
+                //             </div>
+                //         </div>
+                //     </div>  
+                // </div>`
+            };   
+        </script>
+    </body>
+</html>
